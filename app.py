@@ -210,12 +210,6 @@ def profile_sidebar():
             value=int(profile.get("chill_max_energy", 3)),
         )
 
-    profile["favorite_genre"] = st.sidebar.selectbox(
-        "Favorite genre",
-        options=["rock", "lofi", "pop", "jazz", "electronic", "ambient", "other"],
-        index=0,
-    )
-
     profile["include_mixed"] = st.sidebar.checkbox(
         "Include Mixed playlist in views",
         value=bool(profile.get("include_mixed", True)),
